@@ -1,0 +1,165 @@
+:root{
+    --charcoal: #264653ff;
+    --persian-green: #2a9d8fff;
+    --olivine: #8ab17dff;
+    --saffron: #e9c46aff;
+    --earth-yellow: #efb366ff;
+    --sandy-brown: #f4a261ff;
+    --burnt-sienna: #e76f51ff;
+    --titleChemex: rgba(105, 136, 95, 0.798);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 5rem;
+
+    background-color: var(--charcoal);
+}
+
+.navBar li{
+    display: inline-block;
+
+    margin: .5rem;
+
+    list-style: none;
+
+    font-size: 2rem;
+}
+
+.navBar li a{
+    text-decoration: none;
+    color: var(--earth-yellow);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: var(--persian-green);
+}
+
+main section{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: end;
+
+    width: 70%;
+    height: 30vh;
+
+    margin-top: 5rem;
+
+    border-radius: 12px;
+
+    background-color: antiquewhite;
+}
+
+.chemex{
+    background-color:var(--olivine);
+}
+
+
+.imageContainer{
+    position: absolute;
+    
+
+    width: 30vw;
+    height: 30vw;
+
+
+}
+
+.imageContainerAeropress{
+    width: 30vw;
+    height: 30vw;
+}
+
+.imageContainer img{
+    width: 30vw;
+    height: 30vw;
+
+    border-radius: 3px;
+
+    border-bottom: 6px solid rgba(71, 71, 71, 0.386);
+    border-right: 6px solid rgba(71, 71, 71, 0.386);
+}
+
+
+.infoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: 30%;
+
+    background-color: azure;
+
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+}
+
+.facilidadContainer, .capacidadContainer, .limpiezaContainer{
+    border-right: 2px solid var(--olivine);
+}
+
+
+.puntuacionContainer{
+    display: flex;
+    height: min-content;
+
+}
+
+.puntuacionContainer img{
+    display: inline-block;
+}
+
+.imgPuntuacion{
+    width: 1rem;
+    height: 1rem;
+}
+
+.name{
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+.name p{
+    position: relative;
+
+    font-size: 3rem;
+    font-weight: 900;
+
+    color: var(--titleChemex);
+}
+
+#intensidadContainer{
+    border-right: 0px;
+}
