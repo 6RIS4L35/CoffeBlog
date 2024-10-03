@@ -6,7 +6,10 @@
     --earth-yellow: #efb366ff;
     --sandy-brown: #f4a261ff;
     --burnt-sienna: #e76f51ff;
-    --titleChemex: rgba(105, 136, 95, 0.798);
+    --titleChemex: rgba(83, 106, 75, 0.612);
+    --letrasChemex: rgb(83, 106, 75);
+    --circuloCheck: rgb(83, 106, 75);
+    --circuloNoCheck: rgb(171, 219, 155);
 }
 
 *{
@@ -74,19 +77,21 @@ main section{
     background-color: antiquewhite;
 }
 
-.chemex{
+.container{
+    position:relative;
+}
+
+.chemexContainer{
     background-color:var(--olivine);
 }
 
 
 .imageContainer{
     position: absolute;
-    
-
+    left: -2rem;
+    top: -2rem;
     width: 30vw;
     height: 30vw;
-
-
 }
 
 .imageContainerAeropress{
@@ -100,10 +105,20 @@ main section{
 
     border-radius: 3px;
 
-    border-bottom: 6px solid rgba(71, 71, 71, 0.386);
-    border-right: 6px solid rgba(71, 71, 71, 0.386);
+    box-shadow: 9px 10px 20px 6px rgba(71, 71, 71, 0.386);
 }
 
+.info{
+    display: flex;
+    flex-direction: column;
+
+    font-size: 1.5rem;
+}
+
+.info p{
+    margin: 0 auto;
+    color: var(--letrasChemex);
+}
 
 .infoContainer{
     display: flex;
@@ -114,50 +129,50 @@ main section{
     width: 100%;
     height: 30%;
 
-    background-color: azure;
+    background-color: rgb(148, 190, 134);
 
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 }
 
-
-.info{
+.circulosContainer{
     display: flex;
-    flex-direction: column;
-}
-
-.facilidadContainer, .capacidadContainer, .limpiezaContainer{
-    border-right: 2px solid var(--olivine);
-}
-
-
-.puntuacionContainer{
-    display: flex;
-    height: min-content;
 
 }
 
-.puntuacionContainer img{
-    display: inline-block;
+.circulo{
+    float: left;
+
+    width: .8rem;
+    height: .8rem;
+    margin: .3rem;
+
+    shape-outside: circle();
+
+    clip-path: circle();
 }
 
-.imgPuntuacion{
-    width: 1rem;
-    height: 1rem;
+.circuloCheck{
+    background-color: var(--circuloCheck);
+}
+
+.circuloNoCheck{
+    background-color: var(--circuloNoCheck);
 }
 
 .name{
     display: inline-block;
     margin: 0.5rem;
-}
 
-.name p{
     position: relative;
 
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 900;
+}
 
+.name .nameChemex{
     color: var(--titleChemex);
+    text-shadow: 0rem 0 1rem rgb(154, 200, 139);
 }
 
 #intensidadContainer{
